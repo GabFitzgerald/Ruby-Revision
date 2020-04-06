@@ -7,11 +7,9 @@ end
 def method(array_of_numbers)
     new_array = [[], []]
     array_of_numbers.each do |number|
-        if divisible_by_five(number) == true
-            new_array[0].push(number)
-        else
-            new_array[1].push(number)
-        end
+        divisible_by_five(number) == true ? new_array[0].push(number) : new_array[1].push(number)
+    end
     return new_array
 end
 
+p method([9, 4, 25, 3, 5, 30, 2, 8, 10, 100])
